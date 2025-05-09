@@ -29,9 +29,9 @@ header {
 nav {
     background-color:var(--accent-color);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 0.75rem;
+    padding: 0.5rem;
 }
 
 nav a {
@@ -39,7 +39,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    margin: 0 0.5rem;
+    padding: 0 0.5rem;
 }
 
 nav a:hover {
@@ -47,30 +47,31 @@ nav a:hover {
     color: var(--highlight-color);
 }
 
-main.home-layout {
-    display: flex;
+main.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
     max-width: 100%;
-    margin: 0;
-    padding: 2rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-.left-section {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.bio-section,
-.utah-section {
+.card {
     background-color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.bio-section img.profile-img {
+.bio-utah-section h2,
+.web-dev-resources h2 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.bio-section img {
     float: right;
     width: 300px;
     margin-left: 1rem;
@@ -78,33 +79,18 @@ main.home-layout {
     box-shadow: 0 0 15px var(--highlight-color);
 }
 
-h2 {
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.25rem;
-    margin-bottom: 1rem;
-}
-
 .utah-section {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    margin-top: 2rem;
 }
 
-.utah-image {
-    flex-shrink: 0;
-    width: 200px;
-    position: relative;
+.utah-image img {
+    width: 150px;
+    float: left;
     box-shadow: 0 0 10px var(--accent-color);
     border-radius: 8px;
-}
-
-.utah-imgage img {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
 }
 
 .utah-image .label {
@@ -121,27 +107,6 @@ h2 {
     font-weight: bold;
 }
 
-aside.right-column h2 {
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.25rem;
-}
-
-aside.right-column ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-aside.right-column a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
-
-aside.right-column a:hover {
-    text-decoration: underline;
-}
-
 footer.main-footer {
     background-color: var(--heading-background-color);
     color: white;
@@ -150,24 +115,3 @@ footer.main-footer {
     margin-top: 2rem;
 }
 
-@media screen and (max-width: 768px) {
-    main.home-layout {
-        flex-direction: column;
-    }
-    .utah-section {
-        flex-direction: column;
-    }
-    .bio-section img.profile-img {
-        float: right;
-        display: block;
-        box-shadow:hsl(300, 100%, 27%);
-        margin: 1rem auto;
-    }
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav a {
-        margin: 0.25rem 0;
-    }
-}
