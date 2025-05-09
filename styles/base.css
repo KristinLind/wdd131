@@ -4,7 +4,6 @@
     --highlight-color: teal;
     --background-grey: #f4f4f4;
     --text-dark: #00094a;
-    --card-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -14,7 +13,7 @@
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #e6f0f0;
     color: #333;
     line-height: 1.6;
@@ -23,16 +22,15 @@ body {
 header {
     background-color: var(--heading-background-color);
     color: white;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     text-align: center;
 }
 
 nav {
     background-color:var(--accent-color);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1.5rem;
     padding: 0.75rem;
 }
 
@@ -41,29 +39,43 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
+    margin: 0 0.5rem;
 }
 
 nav a:hover {
     text-decoration: underline;
-    color: #ffe6ff;
+    color: var(--highlight-color);
 }
 
 main.home-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem;
 }
 
-.main-column .card,
-.right-column .card {
+.left-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bio-section,
+.utah-section {
     background-color: white;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    padding: 1rem;
     border-radius: 10px;
-    box-shadow: var(--card-shadow);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio-section img.profile-img {
+    float: right;
+    width: 300px;
+    margin-left: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--highlight-color);
 }
 
 h2 {
@@ -74,61 +86,60 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.profile-img {
-    float: right;
-    width: 220px;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 0 15px var(--highlight-color);
+.utah-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
-.utah-box {
-    background-color: white;
+.utah-image {
+    flex-shrink: 0;
+    width: 200px;
+    position: relative;
+    box-shadow: 0 0 10px var(--accent-color);
+    border-radius: 8px;
 }
 
-.utah-flex {
+.utah-imgage img {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
 }
 
-.utah-image {
-    width: 200%;
-    border-radius: 8px;
-    box-shadow: 0 0 15px var(--accent-color);
-}
-
-.utah-text p {
-   margin-top: 0;
-   font-size: 1rem;
-   box-shadow: 0 0 15px var(--accent-color);
-}
-
-.label {
-    margin-top: 1rem;
-    background-color: var(--heading-background-color);
+.utah-image .label {
+    position: absolute;
+    bottom: 10px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2c6f99;
     color: white;
-    display: inline-block;
     padding: 0.3rem 0.6rem;
     border-radius: 5px;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
-.web-dev-resources ul {
+aside.right-column h2 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.25rem;
+}
+
+aside.right-column ul {
     list-style-type: none;
-    padding: 0;
+    padding-left: 0;
 }
 
-.web-dev-resources li {
-    margin-bottom: 0.5rem;
-}
-
-.web-dev-resources a {
-    text-decoration: none;
+aside.right-column a {
     color: var(--accent-color);
-    font-weight: bold;
+    text-decoration: none;
+}
+
+aside.right-column a:hover {
+    text-decoration: underline;
 }
 
 footer.main-footer {
@@ -139,17 +150,24 @@ footer.main-footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     main.home-layout {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
-    .utah-flex {
+    .utah-section {
+        flex-direction: column;
+    }
+    .bio-section img.profile-img {
+        float: right;
+        display: block;
+        box-shadow:hsl(300, 100%, 27%);
+        margin: 1rem auto;
+    }
+    nav {
         flex-direction: column;
         align-items: center;
     }
-    .profile-img {
-        float: right;
-        display: block;
-        margin: 0 auto 1rem auto;
+    nav a {
+        margin: 0.25rem 0;
     }
 }
