@@ -109,7 +109,7 @@ h2 {
 
 .profile-img {
     float: right;
-    width: 500px;
+    width: 600px;
     margin-left: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--accent-color);
@@ -126,7 +126,7 @@ h2 {
 }
 
 .utah-img {
-    width: 400px;
+    width: 600px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--highlight-color);
