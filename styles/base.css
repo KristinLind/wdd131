@@ -29,7 +29,7 @@ header {
 nav {
     background-color:var(--accent-color);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 0.5rem;
 }
@@ -51,9 +51,15 @@ main.main-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .card {
@@ -63,48 +69,63 @@ main.main-grid {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.bio-utah-section h2,
-.web-dev-resources h2 {
+h2 {
     font-size: 1.5rem;
     color: var(--text-dark);
     border-bottom: 2px solid var(--accent-color);
     margin-bottom: 1rem;
 }
 
-.bio-section img {
+.bio-section p {
+    font-size: 1rem;
+}
+
+.profile-img {
     float: right;
     width: 300px;
     margin-left: 1rem;
     border-radius: 10px;
-    box-shadow: 0 0 15px var(--highlight-color);
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 .utah-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-top: 2rem;
+    overflow: auto;
 }
 
-.utah-image img {
-    width: 150px;
+.utah-section img {
+    width: 160px;
     float: left;
+    margin-right: 1rem;
     box-shadow: 0 0 10px var(--accent-color);
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-.utah-image .label {
-    position: absolute;
-    bottom: 10px;
-    border-radius: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #2c6f99;
+.utah-section .label {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+    background-color: var(--heading-background-color);
     color: white;
-    padding: 0.3rem 0.6rem;
     border-radius: 5px;
     font-size: 0.9rem;
     font-weight: bold;
+}
+
+.web-dev-resources {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0. 0.1);
+    height: fit-content;
+}
+
+.web-dev-resources ul {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+}
+
+.web-dev-resources li {
+    margin-bottom: 0.5rem;
 }
 
 footer.main-footer {
