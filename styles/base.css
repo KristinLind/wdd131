@@ -1,8 +1,8 @@
 :root {
-    --heading-background-color: rgb(67, 138, 181);
-    --accent-color: rgb(247, 0, 255);
-    --highlight-color: lightseagreen;
-    --background-grey: #f0f0f0;
+    --heading-background-color: #2a6794;
+    --accent-color: hsl(300, 100%, 27%);
+    --highlight-color: teal;
+    --background-grey: #f4f4f4;
     --text-dark: #00094a;
 }
 
@@ -19,7 +19,7 @@ body {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(239, 245, 245);
+    background-color: #e6f0f0;
     color: #333;
     margin: 0;
     line-height: 1.6;
@@ -34,7 +34,7 @@ header {
 }
 
 nav {
-    background-color: rgba(141, 221, 222, 0.75);
+    background-color:hsl(300, 100%, 27%);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -55,9 +55,9 @@ nav a:hover {
 
 main.home-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    max-width: 840px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
 }
@@ -80,8 +80,9 @@ main.home-grid {
 
 .utah-image img {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     display: block;
-    border-radius: 10px;
 }
 
 .utah-image .label {
@@ -89,7 +90,7 @@ main.home-grid {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(84, 144, 170, 0.75);
+    background: #2c6f99;
     color: white;
     padding: 0.3rem 0.6rem;
     font-weight: bold;
@@ -102,7 +103,7 @@ main img {
 
 .profile-img {
     float: right;
-    width: 150px;
+    width: 200px;
     margin-left: 1rem;
     margin-bottom: 0.5rem;
     border-radius: 10px;
@@ -119,28 +120,26 @@ main img {
     color: var(--text-dark);
 }
 
-.temple-links {
-    width: 100%;
-    background-color: var(--background-grey);
-    box-sizing: border-box;
+.card {
+    background-color: white;
     padding: 1rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0. 0.1);
 }
 
-.temple-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.temple-links li {
-    margin: 0.5rem 0;
-}
-
-.temple-links a {
-    text-decoration: none;
-    font-weight: bold;
+.card h2 {
     color: var(--text-dark);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.25rem;
 }
 
 footer.main-footer {
