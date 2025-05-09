@@ -21,7 +21,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     font-size: 3rem;
     background-color: #e6f0f0;
     color: #333;
