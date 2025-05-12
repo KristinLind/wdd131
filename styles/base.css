@@ -5,137 +5,146 @@
     --background-grey: #f4f4f4;
     --text-dark: #00094a;
 }
-
+  
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+  
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 20px;
     background-color: #e6f0f0;
     color: #333;
 }
-
+  
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
 header {
     background-color: var(--heading-background-color);
     color: white;
     padding: 1rem;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    min-height: 100px; /* Helps prevent layout shifts */
 }
-
+  
 nav {
-    background-color:var(--accent-color);
+    background-color: var(--accent-color);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem;
 }
-
+  
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     padding: 0.5rem 1rem;
 }
-
+  
 nav a:hover {
     text-decoration: underline;
     color: var(--highlight-color);
 }
-
-main.home-layout {
+  
+.wrapper {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+  
+main.home-layout {
+    width: 100%;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 3rem;
-    padding: 3rem;
+    gap: 2rem;
+    padding: 2rem;
     align-items: stretch;
+    flex: 1;
 }
-
+  
 .main-column {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 100%;
     height: 100%;
 }
-
-.right-column {
+  
+.card, .right-column {
     background-color: white;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.card {
-    width: 100%;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 100%;
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
+  
 .card p {
-    font-size: 2rem; 
-    line-height: 2;
+    font-size: 1.125rem;
+    line-height: 1.6;
 }
-
+  
 h2 {
-    font-size: 2.5rem;
+    font-size: 4.2rem;
     color: var(--text-dark);
     border-bottom: 2px solid var(--accent-color);
     margin-bottom: 1rem;
 }
-
+  
 .profile-img {
     float: right;
-    width: 300px;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
     margin-left: 1rem;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--accent-color);
 }
-
+  
 .bio-flex {
     overflow: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
-
+  
 .utah-flex {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    flex-wrap: wrap;
 }
-
+  
 .utah-img {
-    width: 200px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
+    aspect-ratio: 3 / 4;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--highlight-color);
 }
-
+  
 .utah-img-wrapper {
     position: relative;
     display: inline-block;
-}
-
+  }
+  
 .label {
     position: absolute;
     bottom: 10px;
@@ -144,12 +153,12 @@ h2 {
     background: var(--heading-background-color);
     color: white;
     padding: 0.3rem 0.6rem;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
-
+  
 .web-dev-resources {
     background-color: white;
     padding: 1.5rem;
@@ -157,25 +166,39 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
 }
-
+  
 .web-dev-resources ul {
     padding-left: 1.5rem;
     margin-top: 1rem;
 }
-
+  
 .web-dev-resources li {
     margin-bottom: 0.5rem;
 }
-
-
+  
 footer.main-footer {
     background-color: var(--heading-background-color);
     color: white;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
-    margin-bottom: 0;
-    padding-bottom: 0;
     flex-shrink: 0;
 }
+  
+@media (max-width: 768px) {
+    main.home-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .bio-flex, .utah-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile-img, .utah-img {
+      width: 100%;
+      height: auto;
+    }
+} 
+  
 
