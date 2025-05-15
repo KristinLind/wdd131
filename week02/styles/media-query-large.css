@@ -1,4 +1,6 @@
-@media (min-width: 500px) {
+@media only screen and (min-width: 32rem) {
+    span {background-color: green}
+}
     body {
         font-family: 'Roboto', sans-serif;
         background-color: white;
