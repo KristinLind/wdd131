@@ -1,11 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Roboto', 'Raleway';
-    margin: 0;
-    padding: 0;
+    font-family: 'Roboto', 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
     background-color: #f4d4e2;
     color: #333;
 }
@@ -17,9 +23,15 @@ header {
 }
 
 header h1 {
-    line-height: 1.2;
     margin: 0;
     font-size: 1.5rem;
+}
+
+main {
+    flex: 1;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
 main h2 {
@@ -28,12 +40,6 @@ main h2 {
     margin-bottom: 1rem;
     color: black;
     font-weight: bold;
-}
-.container {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 25px;
-    place-items: center;
 }
 
 img {
@@ -89,33 +95,27 @@ figcaption {font-size: smaller;
     display: flex;
 }
 
-main {
-    flex: 1;
-    max-width: 1400px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin: 0 auto;
 }
 
 figure {
+    width: 100%;
     margin: 0;
     background-color: white;
     padding: 1rem;
     border: 1px solid #ccc;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 5ps rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 figure img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 4/3;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -123,6 +123,7 @@ figure img {
 figcaption {
     margin-top: 0.5rem;
     font-weight: bold;
+    font-size: 0.95rem;
 }
 
 footer {
