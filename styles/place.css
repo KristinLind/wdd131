@@ -1,19 +1,47 @@
 :root {
-    --primary-color: #C5E0D8;
-    --accent-color: #B5FFE9;
-    --accent-color2: #CEABB1;
-    --bg-light: #C9C9C9;
-    --text-dark: #444545;
+    --primary-color: #E5DADA;
+    --accent-color: #002642;
+    --accent-color2: #840032;
+    --bg-light: white;
+    --text-dark: #02040F;
 
 }  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    display: flex;
-    flex-direction: column;
+    font-family: Roboto, sans-serif;
     min-height: 100vh;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+}
+
+header {
+    text-align: center;
+    background-color: var(--accent-color);
+    padding: 1rem;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main.home-layout {
+    display: block;
+    padding: 1rem;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0;
 }
 
 .hero img {
@@ -22,10 +50,64 @@ body {
     display: block;
 }
 
+.data-box,
 .weather {
+    position: static;
     background-color: var(--bg-light);
+    border: 2px solid var(--accent-color2);
+    border-radius: 8px;
     padding: 1rem;
-    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.02);
+    width: auto;
+    max-width: 600px;
+    margin: 1rem auto;
+    z-index: 10;
+    height: auto;
+}
+ 
+.data-box h2,
+.weather h2 {
+    background-color: var(--accent-color2);
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 0.75;
+    border-radius: 6px 6px 0 0;
+}
+
+.data-box {
+    top: 2rem;
+    left: 2rem;
+}
+
+.weather {
+    bottom: 2rem;
+    right: 2rem;
+}
+
+
+footer.main-footer {
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 1rem;
+    margin-top: auto;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.footer-line {
+    height: 4px;
+    background-color: var(--text-dark);
+    width: 100%;
+}
+
+footer.main-footer p {
+    margin: 0.25rem 0;
+}
+
+footer.main-footer p:last-child {
+    font-size: 0.85rem;
 }
 
 .icon-mobile {
@@ -38,7 +120,40 @@ body {
     font-size: 1.5rem;
 }
 
-@media (min-width: 600px) {
+.header-line, .footer-line {
+    height: 4px;
+    background-color: var(--text-dark);
+    width: 100%;
+}
+
+.icon-mobile {
+    display: block;
+    max-width: 100%;
+    width: 25px !important;
+    height: 25px !important;
+    margin: 0.5rem auto;
+    object-fit: contain;
+}
+
+@media (min-width: 700px) {
+    .data-box,
+    .weather {
+        position: absolute;
+        width: 300px;
+        max-width: 90%;
+    }
+    main.home-layout {
+        display: block;
+    }
+    .data-box {
+        top: 2rem;
+        left: 2rem;
+    }
+    .weather {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
     .icon-mobile {
         display: none;
     }

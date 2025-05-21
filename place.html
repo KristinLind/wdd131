@@ -8,6 +8,7 @@
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals: Kristin Lind's homepage, featuring bio, hometown information about Utah, and web development resources.">
     <meta name="author" content="Kristin Lind">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="preload" href="styles/desktop.css" as="style" onload="this.onload=null,this.rel='stylesheet'">
     <script src="scripts/place.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -15,37 +16,46 @@
 
 <body>
     <header>
-        <h1>Utah<span class="name-highlight"> Kristin Lind</span></h1>
-        <nav>
-            <a href="https://www.linkedin.com/in/kristin-lind-0281572ba/" target="_blank">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p7#p7" target="_blank">Scripture</a>
-            <a href="#" target="_blank">Final Project</a>
-        </nav>
+        <h1>Utah</h1>
     </header>
-
     <main class="home-layout">
+    <div class="header-line"></div>
             <div class="hero">
                 <picture>
                     <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
-                    <source srcset="images/hero-medium.webp" media="min-width: 500px">
-                    img src="images/hero-small.webp" alt="Beautiful view of America" width="1500" height="750">
+                    <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                    <img src="images/hero-small.webp" alt="Beautiful view of Utah's Bryce Canyon" width="1500" height="750">
                 </picture>
-            </div>
+            <section class="data-box">
+                <h2>Data 🌄</h2>
+                <ul>
+                    <li><strong>Area:</strong> 84,899 sq mi</li>
+                    <li><strong>Population:</strong> 3,380,800</li>
+                    <li><strong>Capital:</strong> Salt Lake City</li>
+                    <li><strong>Languages:</strong>English</li>
+                    <li><strong>Currency:</strong> Us Dollar</li>
+                    <li><strong>Time Zone:</strong>UTC-7 (MDT)</li>
+                    <li><strong>Calling Code:</strong> +1</li>
+                    <li><strong>Internet TLD</strong> .us</li>
+                </ul>
+            </section>
             <section class="weather">
                 <h2>Weather <span class="icon-desktop"></span></h2>
-                <img class="icon-mobile" src="images/weather-icon.svg" alt="Weather icon">
+                <img class="icon-mobile" src="images/weather.svg" alt="Weather icon">
                 <p>Temperature: <span id="temperature">47</span>°F</p>
-                <p>Wind Speed: <span id="windSpeed"></span>mph</p>
-                <p>Wind Chill: <span id="windChill">N/A</span></p>
+                <p><strong>Conditions:</strong> <span id="conditions">Partly Cloudy</span></p>
+                <p>Wind Speed: <span id="windSpeed">10</span>mph</p>
+                <p>Wind Chill: <span id="windChill">42.3</span></p>
             </section>
-        </main>
-    </div>
-    <footer class="main-footer">
-        <p>&copy; <span id="currentyear"></span> Kristin Lind | Utah</p>
-        <p id="lastModified"></p>
-    </footer>
-
+            </div>
+            <div class="main-content-wrapper">
+                <hr class="footer-line">
+                <footer class="main-footer">
+                <p>© <span id="currentyear"></span> 🌷Kristin Lind 🌷| Utah</p>
+                    <p>Last Modified:<span id="lastModified"></span></p>
+                </footer>
+        </div>
+    </main>
 </body>
 
 </html>
