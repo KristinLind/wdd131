@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Images of Places in The United States</title>
+    <link rel="stylesheet" href="styles/lazyload.css"/>
+    <script src="scripts/lazyload.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Places to Visit in the United States</h1>
+        </header>
+   <main>
+    <div class="gallery">
+        <p>This is just a demonstration of learning how to do lazy loading for my webpages. I hope that it is working okay when I push it to my GitHub
+            account. I know that I have borrowed some of my css from my other coding to help this page look better.
+        </p>
+        <figure> 
+            <img src="images/new-york.webp" loading="lazy" class="fade" alt="New York Skyline"/><figcaption>New York Skyline</figcaption>
+        </figure>
+        <figure>
+            <img src="images/colorado.webp" loading="lazy" class="fade"  alt="Colorado Mountain Lake"/><figcaption>Colorado Mountains</figcaption>
+        </figure>
+        <figure> 
+            <img src="images/antelope-canyon.webp" loading="lazy" class="fade" alt="Antelope Canyon"/><figcaption>Antelope Canyon</figcaption>
+        </figure>
+        <figure>
+            <img src="images/san-francisco.webp" loading="lazy" class="fade" alt="San Fransisco Golden Gate Bridge"/><figcaption>Golden Gate Bridge</figcaption>
+        </figure>
+        <figure>
+            <img src="images/squaw-mountain.webp" loading="lazy" class="fade" alt="Squaw Mountain"/><figcaption>Squaw Mountain</figcaption>
+        </figure>
+        <figure>
+            <img src="images/irene-lake.webp" loading="lazy" class="fade" alt="Irene Lake"/><figcaption>Irene Lake</figcaption>
+        </figure>
+        <figure>
+            <img src="images/statue-of-liberty.webp" loading="lazy" class="fade" alt="Statue of Liberty"/><figcaption>Statue of Liberty</figcaption>
+        </figure>
+        <figure>
+            <img src="images/florida.webp" loading="lazy" class="fade" alt="Florida Coastline"/><figcaption>Florida Coastline</figcaption>
+        </figure>
+    </figure>
+    </div>
+
+    <hr class="footer-line">
+    <footer class="main-footer">
+    <p>© <span id="currentyear"></span> 🌷Kristin Lind 🌷| Lazy Load</p>
+        <p>Last Modified:<span id="lastModified"></span></p>
+    </footer>
+</main> 
+</body>
+</html>
