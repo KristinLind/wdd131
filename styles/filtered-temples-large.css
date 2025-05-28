@@ -1,0 +1,41 @@
+@media screen and (min-width: 40em) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 0;
+    }
+    .navigation a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    figure {
+        padding: 1.5rem;
+    }
+    figure img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
