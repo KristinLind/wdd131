@@ -106,12 +106,12 @@ const temples = [
         "https://churchofjesuschristtemples.org/assets/img/temples/adelaide-australia-temple/adelaide-australia-temple-4359.jpg"
     },
     {
-        templeName: "Washington D.C.",
-        location: "Washington D.C., United States",
-        dedicated: "1974, November, 19-22",
-        area: 156558,
+        templeName: "Papeete Tahiti",
+        location: "Papeete, Tahiti",
+        dedicated: "1983, October, 27-29",
+        area: 12150,
         imageUrl:
-        "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-29515.jpg"
+        "https://churchofjesuschristtemples.org/assets/img/temples/_temp/025-Papeete-Tahiti-Temple.jpg"
     },
     
 ];
