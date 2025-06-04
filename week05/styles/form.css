@@ -1,0 +1,161 @@
+form {
+	border: 2px solid #43CDC4;
+	padding: 1.5rem;
+	border-radius: 10px;
+	max-width: 600px;
+	margin: 2rem auto;
+	margin-bottom: 3rem;
+	background-color: #F7FFF7;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+	font-family: Roboto, Arial, sans-serif;
+	margin: 1rem;
+}
+header {
+	text-align: center;
+	max-width: 660px;
+	margin: 0 auto;
+	border-left: 2px solid #43CDC4;
+	border-right: 2px solid #43CDC4;
+	box-sizing: border-box;
+    min-height: 80px;
+    background-color: #1A535C;
+    color: white;
+    padding: 1rem;
+}
+
+h1 {
+	font-size: 1.75rem;
+	color: white;
+	border-bottom: 1px solid #4ECDC4;
+}
+
+hr {
+	margin-bottom: 40px;
+}
+
+label {
+	display: block;
+	font-weight: 700;
+}
+
+#username {
+	margin: 0;
+	width: 100%;
+}
+
+input[type="submit"] {
+	background-color: #1A535C;
+	color: white;
+	border: none;
+	padding: 0.75rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #4ECDC4;
+	color: black;
+}
+
+input[type=text], input[type=range], input[type=radio] {
+	margin: 1rem;
+	padding: 0.5em;
+}
+
+input[type="radio"] {
+	display: none;
+	position: relative;
+	caret-color: rgba(0, 0, 0, 0);
+}
+
+.stars {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+}
+
+.stars > label {
+	color: gold;
+	width: 30px;
+	height: 30px;
+	font-size: 2rem;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+
+.stars > label:hover {
+	color: #000;
+}
+
+.stars > label::before {
+	content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+	content: "\2605";
+}
+
+input[type=checkbox] {
+	margin: 0;
+}
+
+.vcentered {
+	display: flex;
+	align-items: center;
+}
+
+.inline {
+	display: inline;
+}
+
+.ref {
+	font-size: 13px;
+	margin-top: 1rem;
+}
+
+input, select, textarea {
+	width: 100%;
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	box-sizing: border-box;
+}
+
+fieldset {
+	background-color: #F8FFF8;
+	border: 1px solid #CCC;
+	padding: 1rem;
+}
+
+footer {
+    background-color:#1A535C;
+    color: white;
+	max-width: 660px;
+	margin: 0 auto;
+	border-left: 2px solid #43CDC4;
+	border-right: 2px solid #43CDC4;
+	box-sizing: border-box;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+fieldset label {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: normal;
+	margin-bottom: 0.5rem;
+	line-height: 1.2;
+	justify-content: flex-start;
+}
+
+fieldset label input[type="checkbox"] {
+	margin: 0;
+}
