@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review Form</title>
     <link rel="stylesheet" href="styles/form.css">
-
+    <meta name="description" content="Submit your product review and rating.">
+    <meta name="author" content="Kristin Lind">
 </head>
 <body>
     <header>
@@ -17,17 +18,18 @@
 
             <label for="productName">Product:</label>
             <select id="productName" name="productName" required>
-                <option value="" disabled selected>Select a Product...</option>
+                <option value="" disabled selected hidden>Select a Product...</option>
             </select>
 
-            <fieldset>
+            <fieldset class="rating">
                 <legend>Overall Rating</legend>
-                <label><input type="radio" name="rating" value="1" required> 1 ☆</label>
-                <label><input type="radio" name="rating" value="2"> 2 ☆☆</label>
-                <label><input type="radio" name="rating" value="3"> 3 ☆☆☆</label>
-                <label><input type="radio" name="rating" value="4"> 4 ☆☆☆☆</label>
-                <label><input type="radio" name="rating" value="5"> 5 ☆☆☆☆☆</label> 
+                <label><input type="radio" name="rating" value="5"><span>★★★★★</span></label>
+                <label><input type="radio" name="rating" value="4"><span>★★★★</span></label>
+                <label><input type="radio" name="rating" value="3"><span>★★★</span></label>
+                <label><input type="radio" name="rating" value="2"><span>★★</span></label>
+                <label><input type="radio" name="rating" value="1"><span>★</span></label>
             </fieldset>
+              
 
             <label for="installDate">Installation Date:</label>
             <input type="date" id="installDate" name="installDate" required>
@@ -37,7 +39,7 @@
                 <label><input type="checkbox" name="features" value="easyUse">Easy to Use</label>
                 <label><input type="checkbox" name="features" value="durable">Durable</label>
                 <label><input type="checkbox" name="features" value="affordable">Affordable</label>
-                <label><input type="checkbox" name="features" value="innovative">Innovative</label> 
+                <label><input type="checkbox" name="features" value="innovative">Innovative</label>
             </fieldset>
 
             <label for="review">Written Review:</label>
@@ -46,17 +48,16 @@
             <label for="username">Your Name:</label>
             <input type="text" id="username" name="username">
 
-            <input type="submit" value="Submit Review"
+            <input type="submit" value="Post Review">
         </form>
     </main>
     <footer>
         <p>&copy; 2025 🌷 Kristin Lind 🌷 | WDD 131</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-
     <script src="scripts/form.js"></script>
     <script>
-        document.getElementById("lastModified").textContent = document.lastModified;
-      </script>
-    </body>
+      document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
 </html>

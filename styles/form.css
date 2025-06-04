@@ -12,8 +12,9 @@ form {
 body {
 	font-family: Roboto, Arial, sans-serif;
 	margin: 1rem;
+	background-color: #FFFFFF;
 }
-header {
+header, footer {
 	text-align: center;
 	max-width: 660px;
 	margin: 0 auto;
@@ -26,24 +27,25 @@ header {
     padding: 1rem;
 }
 
+footer {
+	font-size: 0.9rem;
+	width: 100%;
+}
+
 h1 {
 	font-size: 1.75rem;
 	color: white;
 	border-bottom: 1px solid #4ECDC4;
 }
 
-hr {
-	margin-bottom: 40px;
-}
-
-label {
-	display: block;
-	font-weight: 700;
-}
-
-#username {
-	margin: 0;
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
 	width: 100%;
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	padding: 0.5rem;
+	box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -60,9 +62,10 @@ input[type="submit"]:hover {
 	color: black;
 }
 
-input[type=text], input[type=range], input[type=radio] {
-	margin: 1rem;
-	padding: 0.5em;
+#username {
+	margin: 0;
+	width: 100%;
+	margin-bottom: 1.5rem;
 }
 
 input[type="radio"] {
@@ -71,79 +74,32 @@ input[type="radio"] {
 	caret-color: rgba(0, 0, 0, 0);
 }
 
-.stars {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: left;
+.rating input[type="radio"] {
+	display: none;
 }
-
-.stars > label {
+  
+.rating span {
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+  
+.rating input[type="radio"]:checked + span {
 	color: gold;
-	width: 30px;
-	height: 30px;
-	font-size: 2rem;
-	margin-left: 5px;
-	display: flex;
-	align-items: center;
-	caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
 }
+  
 
-.stars > label:hover {
-	color: #000;
-}
-
-.stars > label::before {
-	content: "\2606";
-}
-
-.stars input:checked ~ label::before {
-	content: "\2605";
-}
-
-input[type=checkbox] {
-	margin: 0;
-}
-
-.vcentered {
-	display: flex;
-	align-items: center;
-}
-
-.inline {
-	display: inline;
-}
-
-.ref {
-	font-size: 13px;
-	margin-top: 1rem;
-}
-
-input, select, textarea {
-	width: 100%;
-	margin-bottom: 1rem;
-	font-size: 1rem;
-	box-sizing: border-box;
+form > label,
+form > label[for] {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 0.25rem;
 }
 
 fieldset {
-	background-color: #F8FFF8;
+	background-color: #f8fff8;
 	border: 1px solid #CCC;
 	padding: 1rem;
-}
-
-footer {
-    background-color:#1A535C;
-    color: white;
-	max-width: 660px;
-	margin: 0 auto;
-	border-left: 2px solid #43CDC4;
-	border-right: 2px solid #43CDC4;
-	box-sizing: border-box;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    width: 100%;
-    box-sizing: border-box;
+	margin-bottom: 1rem;	
 }
 
 fieldset label {
@@ -154,8 +110,24 @@ fieldset label {
 	margin-bottom: 0.5rem;
 	line-height: 1.2;
 	justify-content: flex-start;
+	flex-wrap: nowrap;
 }
 
-fieldset label input[type="checkbox"] {
+input[type="checkbox"] {
 	margin: 0;
+}
+
+.confirmation {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.confirmation h1 {
+	font-size: 1.8rem;
+	color: #1A535C;
+	margin-bottom: 1rem;
+}
+
+.confirmation p {
+	font-size: 1.2rem;
 }

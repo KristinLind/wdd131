@@ -1,14 +1,9 @@
-const rangevalue = document.getElementById("rangevalue");
-const range = document.getElementById("r");
-
-// RANGE event listener
-range.addEventListener('change', displayRatingValue);
-range.addEventListener('input', displayRatingValue);
-
-function displayRatingValue() {
-    rangevalue.innerHTML = range.value;
-}
 document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", () => {
+    let count = Number(localStorage.getItem("reviewCount")) || 0;
+    localStorage, setItem("reviewCount", count + 1);
+  });
   const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -17,16 +12,25 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
   ];
 
-  const selectElement = document.querySelector('#productName');
+  const selectElement = document.querySelector("#productName");
  
   if (selectElement) {
     products.forEach(product => {
-      const option = document.createElement('option');
-      option.value = product.id;
+      const option = document.createElement("option");
+      option.value = product.name;
       option.textContent = product.name;
       selectElement.appendChild(option);
     });
+
+    console.log("✅ Product option added to dropdown.");
+  } else {
+      console.error("❌ Could not find #productName select element.");
+    }
+  const lastModified = document.getElementById("lastModified");
+  if (lastModified) {
+    lastModified.textContent = document.lastModified;
   }
 });
+
 
 

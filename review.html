@@ -8,22 +8,22 @@
 </head>
 <body>
     <main>
+        <div class="confirmation">
         <h1>Thank You for Your Review!</h1>
-        <p>Your review has been submitted.</p>
-        <p>You have submitted <span id="review-count">1</span> reviews.</p>
+        <p>Your review has been recieved.</p>
+        <p id="reviewCount"</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 🌷 Kristin Lind 🌷 | WDD 131</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
     <script>
-        let count = localStorage.getItem('reviewCount');
-        count = count ? parseInt(count) + 1 : 1;
-        localStorage.setItem('reviewCount', count);
-        document.getelementById('review-count').textContent = count;
-
         document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
-    
+      
+        const count = localStorage.getItem("reviewCount") || 0;
+        const plural = count == 1 ? "review" : "reviews";
+        document.getElementById("reviewCount").textContent = `You have submitted ${count} ${plural}.`;
+      </script>
 </body>
 </html>
