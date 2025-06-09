@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector("form");
   form.addEventListener("submit", () => {
     let count = Number(localStorage.getItem("reviewCount")) || 0;
-    localStorage, setItem("reviewCount", count + 1);
+    localStorage.setItem("reviewCount", count + 1);
   });
   const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },

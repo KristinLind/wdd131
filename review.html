@@ -25,5 +25,11 @@
         const plural = count == 1 ? "review" : "reviews";
         document.getElementById("reviewCount").textContent = `You have submitted ${count} ${plural}.`;
       </script>
+      <script>
+        const reviewCount = localStorage.getItem("reviewCount") || 0;
+        document.getElementById("reviewCountDisplay").textContent = reviewCount;
+      </script>
+      <script src="scripts/review.js" defer></script>
+      
 </body>
 </html>
