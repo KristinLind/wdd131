@@ -88,6 +88,9 @@ input[type="radio"] {
 	color: gold;
 }
   
+.required-asterisk {
+	color: red;
+}
 
 form > label,
 form > label[for] {
