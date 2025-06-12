@@ -217,7 +217,11 @@ section {
     color: var(--accent-color);
 }
 
-.hero .cta {
+.hero .cta,
+.hero .cta:link,
+.hero .cta:visited {
+    text-decoration: none;
+    text-align: center;
     margin: 1rem auto;
     padding: 1rem 2.5rem;
     margin-top: 1rem;
@@ -236,6 +240,7 @@ section {
     background-color: var(--primary-color);
     color: var(--accent-color);
 }
+
 .hero-overlay {
     position: absolute;
     bottom: 1rem;
@@ -254,6 +259,32 @@ section {
 
 .hero-overlay p {
     font-size: 1.5rem;
+}
+.book-travel {
+    background-color: var(--accent-color2); /* Dark red */
+    color: var(--text-light, #fff); /* Ensures text inside h2 is visible */
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-travel .cta {
+    background-color: var(--accent-color3);  /* A lighter color */
+    color: var(--text-dark, #000);           /* Ensure text contrasts well */
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.book-travel .cta:hover {
+    background-color: var(--border-color);
+    color: var(--accent-color);
 }
 
 .destination-search {
@@ -498,11 +529,11 @@ img:hover {
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    text-align center;
+    text-align: center;
 }
 
 .contact-info h2, .contact-form h2 {
-    font-size 2rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
     color: var(--text-color);
 }
@@ -516,8 +547,8 @@ img:hover {
 }
 
 .contact-info p, .contact-form p {
-    margin-bottom 1rem;
-    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     color: var(--text-color);
 }
 
@@ -534,14 +565,14 @@ img:hover {
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 2rem;
     width: 100%;
     box-sizing: border-box;
 }
 
 .contact-form button {
     padding: 0.75rem;
-    font-size: 1.1rem;
+    font-size: 2rem;
     background-color: var(--primary-color);
     color: var(--accent-color);
     border: none;
@@ -557,13 +588,20 @@ img:hover {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 .newsletter-optin {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin: 1rem 0;
+    font-size: 1.5rem;
+}
+.newsletter-optin input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent-color);
+    cursor: pointer;
 }
   
 footer, .site-footer {
