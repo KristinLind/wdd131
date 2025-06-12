@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact information for company">
+    <title>Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<header>
+    <div class="header-content">
+    <img src="images/travel-logo.webp" alt="Beyond Travel Logo" class="logo">
+    <h1>Beyond Travel | Kristin Lind | WDD131</h1>
+    <div class="nav-wrapper">
+        <button class="hamburger" aria-label="Toggle Navigation">&#9776;</button>
+            <nav class ="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reference.html">References</a></li>   
+            </ul>
+        </nav>
+        </div>
+        </div>
+        </header>
+        <main>
+            <section class="contact-info">
+                <h2>Have questions? We're happy to help.</h2>
+                <hr>
+                <p><em>Getting in touch is easy!</em></p>
+                <p>
+                  The Beyond Travel Service Team is available to assist you between  
+                  <strong>9 AM to 6 PM Mountain Time</strong>, Monday through Friday.
+                </p>
+                <p><strong>Kristin Lind</strong><br>
+                  5164 W Longbow Dr<br>
+                  South Jordan, Utah 84009 USA
+                </p>
+                <p>📞 <a href="tel:3033191585">303-319-1585</a><br>
+                   ✉️ <a href="mailto:kristin.lind@comcast.net">kristin.lind@comcast.net</a>
+                </p>
+              </section>
+            <section class="contact-form">
+              <h2>Send Us a Message</h2>
+              <form id="contactForm" method="get" action="response.html">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+          
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+          
+                <label for="inquiry">Type of Inquiry:</label>
+                <select id="inquiry" name="inquiry" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="cruise">Cruise</option>
+                  <option value="foodie">Foodie Tour</option>
+                  <option value="fishing">Fishing Trip</option>
+                  <option value="custom-other">Custom Travel</option>
+                </select>
+          
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+          
+                <div class="newsletter-optin">
+                    <label for="newsletter">Sign me up for the newsletter:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                </div>
+                  
+                <button type="submit">Send Message</button>
+                </form>
+                <p><strong>Contact Form Submission:</strong> <span id="submissionCount">0</span></p>
+            </section>
+          </main>
+          <footer class="site-footer">
+            <p>&copy; 2025 🌷Kristin Lind🌷 | Beyond Travel</p> 
+            <p>Last Modified: <span id="lastModified"></span></p>
+            <div class="social-media">
+              <a href="https://facebook.com">
+                  <img src="images/FacebookLogo.jpg" alt="Facebook">
+              </a>
+              <a href="https://twitter.com">
+                  <img src="images/twitter.jpg" alt="Twitter">
+              </a>
+              <a href="https://instagram.com">
+                  <img src="images/instagramlogo.jpg" alt="Instagram">
+              </a>
+            </div>
+        </footer>
+        <script src="scripts/scripts.js" defer></script>
+    </body>
+    </html>          
