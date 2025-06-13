@@ -284,7 +284,7 @@ section {
     display: inline-block;
     margin-top: 1rem;
     padding: 1rem 2.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     border-radius: 8px;
     text-decoration: none;
@@ -292,17 +292,51 @@ section {
 }
 
 .book-travel .cta:hover {
-    background-color: var(--border-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
     color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .destination-search {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     margin: 2rem auto;
     max-width: 600px;
+}
+
+.destination-search .cta {
+    margin-top: 0.75rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--accent-color3);
+    color: var(--text-color);
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.destination-search .cta:hover {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.destination-search p {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .destination-search input {
@@ -376,22 +410,32 @@ section {
     gap: 0.5rem;
 }
 
-.travel-packages-search input {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 2px solid var(--accent-color3);
+.travel-packages-search .cta {
+    margin-top: 0.75rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--accent-color3);
+    color: var(--text-color);
     border-radius: 8px;
-    width: 300px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.travel-packages-search button {
+.travel-packages-search .cta:hover {
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: var(--primary-color);
     color: var(--accent-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.travel-packages-search {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .travel-specials img,
