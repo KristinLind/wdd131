@@ -75,7 +75,10 @@
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                   const count = localStorage.getItem("contactSubmissions") || 0;
-                  document.getElementById("submissionCount").textContent = count;
+                  const countSpan = document.getElementById("submissionCount");
+                  if(countSpan) {
+                    countSpan.textContent = count;
+                  }
                 });
               </script>
       </body>
