@@ -301,6 +301,13 @@ section {
     cursor: pointer;
 }
 
+.destinations-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem auto 1rem auto;
+    color: var(--text-color);
+}
+
 .destination-search {
     display: flex;
     flex-direction: column;
@@ -349,9 +356,25 @@ section {
     cursor: pointer;
 }
 
+.destination-card-wrapper {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    max-width: 95%;
+}
+
+.destination-grid-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
 .destination-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 2rem;
 }
