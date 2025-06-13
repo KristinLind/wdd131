@@ -89,19 +89,20 @@ nav {
     position: absolute;
     top: 100%;
     right: 0;
+    left: auto;
     background-color: var(--border-color);
     flex-direction: column;
-    align-items: flex-start;
     display: none;
     padding: 1rem;
     border-radius: 8px;
-    width: 200px;
+    width: max-content;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 .nav-links ul.show {
     display: flex;
-    flex-direction: column;
 }
 
 .nav-links ul li a {
@@ -713,20 +714,16 @@ footer, .site-footer {
 @media screen and (min-width: 768px) {
 
     .nav-links ul {
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--border-color);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 1rem;
-        width: 200px;
-        display: none;
-        padding: 1rem 0;
+        flex-direction: row;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
     }
 
-    .nav-links ul.show {
-        display: flex;
+    .nav-links ul li {
+        margin: 0 1rem;
     }
     .card-group,
     .package-group,
