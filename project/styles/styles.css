@@ -456,7 +456,7 @@ section {
 
 .destination-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     justify-content: center;
 }
@@ -846,7 +846,7 @@ footer, .site-footer {
     }
 
     .destination-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .specials-text {
