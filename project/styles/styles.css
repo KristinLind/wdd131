@@ -26,6 +26,11 @@ body {
     color: var(--text-color);
 }
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -56,19 +61,24 @@ header {
     margin: 0 auto;
     max-width: 1200px;
     padding: 0 1rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
 }
 
 header h1 {
-    font-size: 2rem;
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+    font-size: 1.6rem;
+    line-height: 1.2;
     font-weight: bold;
     margin: 0;
-    white-space: nowrap;
 }
 
 .logo {
     width: 90px;
+    height: auto;
+    flex-shrink: 0;
     border-radius: 8px;
 }
 
@@ -149,7 +159,8 @@ nav {
 }
 .hamburger {
     display: block;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    flex-shrink: 0;
     background: none;
     border: none;
     color: var(--accent-color);
