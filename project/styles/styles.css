@@ -5,8 +5,11 @@
     --accent-color3: #D7C9AA;
     --text-color: #19535F;
     --border-color: #0B7A75;
+    }
+html {
+    font-size: clamp(14px, 2.5vw, 18px);
 }
-
+        
 * {
     margin: 0;
     padding: 0;
