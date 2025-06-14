@@ -89,7 +89,6 @@ nav {
     position: absolute;
     top: 100%;
     right: 0;
-    left: auto;
     background-color: var(--border-color);
     flex-direction: column;
     display: none;
@@ -301,6 +300,50 @@ section {
     border-radius: 8px;
     cursor: pointer;
 }
+.featured-box {
+    background-color: var(--accent-color3);
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 900px;        /* Wider card */
+    border-radius: 12px;     /* Slightly more rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: var(--text-color);
+    display: flex;           /* Lay out image and text side by side */
+    flex-wrap: wrap;         /* Wrap on small screens */
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .featured-box img {
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  .featured-box h3,
+  .featured-box p {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+  
+#featuredDestination {
+    background-color: var(--accent-color2);
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+}
+  #featuredDestination h3 {
+    color: var(--text-color);
+    font-size: 1.8rem;
+}
+  #featuredDestination p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+   
 
 .destinations-heading {
     text-align: center;
@@ -399,6 +442,13 @@ section {
     font-size: 1.2rem;
     color: var(--text-color);
     font-weight: bold;
+}
+
+.section-heading {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .travel-packages-wrapper {
@@ -712,8 +762,13 @@ footer, .site-footer {
 }
 
 @media screen and (min-width: 768px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
     .nav-links ul {
+        display: flex;
         flex-direction: row;
         position: static;
         background: none;
