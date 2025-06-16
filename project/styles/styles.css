@@ -116,9 +116,10 @@ nav {
     display: none;
     flex-direction: column;
     position: absolute;
+    right: 1rem;
     top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(0);
+    left: auto;
+    transform: none;
     overflow-x: hidden;
     overflow-y: auto;
     opacity: 0;
@@ -138,7 +139,6 @@ nav {
     flex-direction: column;
     pointer-events: all;
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
 }
 .nav-links ul li {
     margin-bottom: 0.5rem; 
@@ -150,6 +150,7 @@ nav {
 .nav-links ul li a {
     color: var(--accent-color);
     font-size: 1.3rem;
+    padding: 0.5rem;
     text-decoration: none;
     font-weight: bold;
 }
@@ -168,8 +169,7 @@ nav {
     z-index: 1001;
 }
 .hamburger.active {
-    background-color: var(--accent-color3);
-    border-radius: 6px;
+    display: none;
 }
 
 .hamburger:hover {
@@ -800,21 +800,31 @@ footer, .site-footer {
 }
 
 @media screen and (min-width: 768px) {
-        .nav-links ul.show {
-        flex-direction: row;
-        position: static;
-        background: none;
-        box-shadow: none;
-        padding: 0;
-        width: auto;
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-10px);
+        background-color: var(--border-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        width: max-content;
+        max-width: 90vw;
         min-width: 0;
     }
-
-    .nav-links ul li {
-        margin-left: 1rem;
-        margin-bottom: 0;
+    .nav-links ul.show {
+        display: flex;
+        transform: translateX(-50%) translateY(0);
     }
-
+    .nav-links ul li {
+        text-align: right;
+        margin-bottom: 0.5rem;
+    }
+    .nav-links ul li a {
+        font-size: 1.2rem;
+    }
     .header-content {
         flex-wrap: nowrap;
         flex-direction: row;
@@ -825,18 +835,16 @@ footer, .site-footer {
         font-size: 2.5rem;
         white-space: nowrap;
     }
-
     .card-group,
     .package-group,
     .review-cards {
-      grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
-  
     .travel-specials {
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-      text-align: left;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
     }
     .hero h2 {
         font-size: 2.5rem;
@@ -844,28 +852,24 @@ footer, .site-footer {
     .hero p {
         font-size: 2rem;
     }
-
     .destination-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-
     .specials-text {
-      flex: 1;
-      padding-right: 2rem;
-      font-size: 1.4rem;
-      line-height: 1.6;
+        flex: 1;
+        padding-right: 2rem;
+        font-size: 1.4rem;
+        line-height: 1.6;
     }
-  
     .specials-img {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  
     .specials-img img {
-      width: 100%;
-      max-width: 500px;
+        width: 100%;
+        max-width: 500px;
     }
 }
 
