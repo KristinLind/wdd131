@@ -24,6 +24,7 @@ body {
     font-weight: bold;
     background-color: var(--accent-color2);
     color: var(--text-color);
+    padding-top: 120px;
 }
 
 html, body {
@@ -32,16 +33,18 @@ html, body {
 }
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
     width: 100%;
     background-color: var(--border-color);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     color: var(--accent-color);
     border-top: 8px solid var(--primary-color);
     border-bottom: 8px solid var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .header-separator {
@@ -62,7 +65,7 @@ header {
     max-width: 1200px;
     padding: 0 1rem;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 header h1 {
@@ -177,6 +180,7 @@ main {
     position: relative;
     z-index: 1;
     margin-top: 2rem;
+    overflow: visible;
 }
 
 main section {
