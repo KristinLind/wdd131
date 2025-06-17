@@ -804,14 +804,15 @@ footer, .site-footer {
         display: none;
         flex-direction: column;
         position: absolute;
+        right: 1rem;
         top: 100%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-10px);
+        left: auto;
+        transform: none;
         background-color: var(--border-color);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         padding: 1rem;
         width: max-content;
-        max-width: 90vw;
+        max-width: 85vw;
         min-width: 0;
     }
     .nav-links ul.show {
